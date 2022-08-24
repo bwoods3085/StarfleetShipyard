@@ -1,0 +1,73 @@
+nav.main-menu ul li.current-list-item > a {
+    color: rgba(124, 132, 135, 0.852);
+  }
+  
+nav.main-menu li:hover > a {
+    color: #061169;
+}
+
+.hero-bg {
+    background-image: url(../img/UFP/ufpcmdMirror.jpeg);
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+}
+
+.hero-area::after {
+    background-color:transparent;
+    box-shadow: 0 0 20px #061169;
+}
+
+.sticky-wrapper.is-sticky .top-header-area {
+    background-color: rgba(0,0,0,.80);
+    padding: 15px 0;
+}
+
+.hero-text p.subtitle {
+    color: rgba(204, 152, 8, 0.852);
+    font-size: 36px;
+    text-shadow: 0 0 5px #000000;
+}
+
+body {
+font-size: 2em;
+color: black;
+}
+
+a.boxed-btn {
+    background-color: rgba(204, 152, 8);
+    
+}
+
+a.boxed-btn:hover {
+    background-color:#061169;
+    color: lightsteelblue;
+}
+
+.logo-carousel-section {
+    background-color: rgba(124, 132, 135, 0.852);
+    box-shadow: 0 0 1000px #061169;
+    padding: 10px 0;   
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow:visible;
+}
+
+.single-logo-item img {
+    border-radius: 100px;
+    box-shadow: 0 0 19px;
+    margin: 17px auto;
+}
+
+.footer-area {
+    background-color: black;
+    box-shadow: 0 0 20px #061169;
+}
+
+.copyright {
+   background-color: rgba(124, 132, 135, 0.852); 
+   border-top: 1px solid #061169;
+   box-shadow: 0 0 30px #061169;
+}

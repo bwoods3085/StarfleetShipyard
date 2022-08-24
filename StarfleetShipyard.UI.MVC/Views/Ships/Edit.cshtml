@@ -1,0 +1,79 @@
+﻿@model StarfleetShipyard.DATA.EF.Models.Ship
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Ship</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ShipId" />
+            <div class="form-group">
+                <label asp-for="ShipName" class="control-label"></label>
+                <input asp-for="ShipName" class="form-control" />
+                <span asp-validation-for="ShipName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipPrice" class="control-label"></label>
+                <input asp-for="ShipPrice" class="form-control" />
+                <span asp-validation-for="ShipPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipDescription" class="control-label"></label>
+                <input asp-for="ShipDescription" class="form-control" />
+                <span asp-validation-for="ShipDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitsInStock" class="control-label"></label>
+                <input asp-for="UnitsInStock" class="form-control" />
+                <span asp-validation-for="UnitsInStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitsOnOrder" class="control-label"></label>
+                <input asp-for="UnitsOnOrder" class="form-control" />
+                <span asp-validation-for="UnitsOnOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipStatusId" class="control-label"></label>
+                <select asp-for="ShipStatusId" class="form-control" asp-items="ViewBag.ShipStatusId"></select>
+                <span asp-validation-for="ShipStatusId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipClassesId" class="control-label"></label>
+                <select asp-for="ShipClassesId" class="form-control" asp-items="ViewBag.ShipClassesId"></select>
+                <span asp-validation-for="ShipClassesId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipTypesId" class="control-label"></label>
+                <select asp-for="ShipTypesId" class="form-control" asp-items="ViewBag.ShipTypesId"></select>
+                <span asp-validation-for="ShipTypesId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierId" class="control-label"></label>
+                <select asp-for="SupplierId" class="form-control" asp-items="ViewBag.SupplierId"></select>
+                <span asp-validation-for="SupplierId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipImage" class="control-label"></label>
+                <input asp-for="ShipImage" class="form-control" />
+                <span asp-validation-for="ShipImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

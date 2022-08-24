@@ -1,0 +1,11 @@
+.hero-area hero-bg {
+    background-image: url(../img/UFP/ufpcmdMirror.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image:none;
+}
+
+body {
+font-size: 2em;
+}

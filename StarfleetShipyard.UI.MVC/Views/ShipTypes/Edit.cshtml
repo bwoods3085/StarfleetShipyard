@@ -1,0 +1,39 @@
+﻿@model StarfleetShipyard.DATA.EF.Models.ShipType
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ShipType</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ShipTypesId" />
+            <div class="form-group">
+                <label asp-for="ShipTypesName" class="control-label"></label>
+                <input asp-for="ShipTypesName" class="form-control" />
+                <span asp-validation-for="ShipTypesName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipTypesDescription" class="control-label"></label>
+                <input asp-for="ShipTypesDescription" class="form-control" />
+                <span asp-validation-for="ShipTypesDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
